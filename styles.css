@@ -1,9 +1,12 @@
 body {
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+
   display: grid;
   grid-template-rows: 200px 1fr;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: min(300px, 15%) 1fr;
   grid-template-areas:
     'sd hd hd'
     'sd mn mn'
@@ -13,12 +16,126 @@ body {
 header {
   grid-area: hd;
   background-color: #434c5e;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr min-content;
+  padding: 10px;
 }
+
 main {
   grid-area: mn;
   background-color: #d8dee9;
+  overflow-y: auto;
+  color: #2e3440;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 300px;
+  gap: 15px;
+  padding-left: 15px;
+  padding-right: 30px;
 }
+
+.projects-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+  gap: 15px;
+}
+
+.project-card {
+  background-color: #eceff4;
+  border-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 100px 1fr;
+}
+
+.preview {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 100%;
+}
+
+.preview img {
+  width: 100%;
+}
+
+.card-content {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding-left: 15px;
+}
+
+.actions {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  justify-self: end;
+}
+
+.project-card .actions {
+  align-self: end;
+}
+
+.announcements-container {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.trending-container {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.announcements,
+.trends {
+  background-color: #eceff4;
+  padding: 20px;
+}
+
 aside {
   grid-area: sd;
   background-color: #81a1c1;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.logo {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #eceff4;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+menu,
+menu ul {
+  padding: 0;
+  padding-left: 5px;
+}
+
+menu {
+  margin-bottom: 40px;
+}
+
+ul a {
+  text-decoration: none;
+  color: #eceff4;
+}
+
+ul img {
+  width: 20px;
+  height: auto;
+  padding-right: 5px;
+  margin-bottom: -3px;
 }
