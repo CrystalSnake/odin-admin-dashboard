@@ -1,0 +1,24 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    'sd hd hd'
+    'sd mn mn'
+    'sd mn mn';
+}
+
+header {
+  grid-area: hd;
+  background-color: #434c5e;
+}
+main {
+  grid-area: mn;
+  background-color: #d8dee9;
+}
+aside {
+  grid-area: sd;
+  background-color: #81a1c1;
+}
