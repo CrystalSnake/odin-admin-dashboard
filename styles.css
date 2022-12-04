@@ -98,14 +98,14 @@ header {
   height: 100px;
 }
 
-.username {
+.head .username {
   font-size: 25px;
 }
 
 .head-buttons {
   align-self: end;
   justify-self: end;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .head-buttons button {
@@ -209,6 +209,11 @@ main p {
   grid-row: 1 / 2;
 }
 
+hr {
+  border-style: solid;
+  color: #d8dee9;
+}
+
 .trending-container {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -218,6 +223,22 @@ main p {
 .trends {
   background-color: #eceff4;
   padding: 20px;
+}
+
+.trend-card {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.trend-card img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.trend-card p {
+  margin: 5px 0;
 }
 
 aside {
